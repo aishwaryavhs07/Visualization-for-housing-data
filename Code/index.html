@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/stylesheet.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="src/lib/d3.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>King County Housing Data</title>
+    </head>
+    <body>
+        <div class="bodyDiv">
+           
+                <h1 align="center">King County Housing Data</h2>
+            </div>
+            <div class="row">
+              <div class="col-lg-9 chart-container" id="svg-container"></div>
+                <div class="col-lg-3 filter-container">
+                    <g>
+                        
+                        <div class="contchild">
+                            <select id="colCount" onchange="colChanger()">
+                                <option value="price" selected="selected">Price</option>
+                                <option value="bedrooms">Bedrooms</option>
+                                <option value="bathrooms">Bathrooms</option>
+                                <option value="sqft_living">Living area in Sqft</option>
+                                <option value="sqft_lot">Lot area in Sqft</option>
+                                <option value="floors">Number of Floors</option>
+                                <option value="waterfront">Waterfront </option>
+                                <option value="view">View</option>
+                                <option value="condition">Condition of the house</option>
+                                <option value="grade">Grade</option>
+                                <option value="bathrooms">Bathrooms</option>
+                                <option value="sqft_living15">Total area</option>
+                                <option value="sqft_lot15">Total lot area</option>
+                        
+                            </select>
+                        </div>
+                        <div class="contchild2">
+                            <b>Change the Bin Width/Size:</b>
+                            <input type="range" min="2" max="21" value="11"  class="slider" id="sliderId" onchange="binCountHandler()" />
+                        
+                        </div>
+                    </g>
+                </div>
+            </div>
+        </div>
+        <script src="src/graphplot.js"></script>
+    </body>
+</html>
